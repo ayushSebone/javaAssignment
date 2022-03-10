@@ -3,10 +3,10 @@ public class permutation {
 
 	public static void main(String[] args) {
 		
-		Scanner sc = new Scanner(System.in);
+		Scanner scn = new Scanner(System.in);
 		
 		System.out.println("Enter the String");
-		String str = sc.nextLine();
+		String str = scn.nextLine();
 		printPermutations(str ,"");
 		
 	}
