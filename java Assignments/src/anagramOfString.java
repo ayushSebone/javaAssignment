@@ -11,22 +11,27 @@ public class anagramOfString {
 		String str1 = sc.nextLine();
 		System.out.println("Enter the Second String");	
 		String str2 = sc.nextLine();
+		boolean flag = false;
 		
 		if(str1.length() != str2.length()) {
-			System.out.println("Both the string are not anagram to each other");
+			flag = false;
+			
 		}else {
-			char [] arr1 = str1.toLowerCase().toCharArray();
-			char [] arr2 = str1.toLowerCase().toCharArray();
+			char [] arr1 = str1.toCharArray();
+			char [] arr2 = str1.toCharArray();
 			
 			Arrays.sort(arr1);
 			Arrays.sort(arr2);
 			
-			if(Arrays.equals(arr1, arr2)) {
-				System.out.println("Both Strings are anagram of each other");		
-			}else {
-				System.out.println("Both Strings arn't anagram of each other");	
-			}
+			flag = Arrays.equals(arr1, arr2);
+					
 			
+		}
+		
+		if(flag) {
+			System.out.println("Both Strings are anagram of each other");		
+		}else {
+			System.out.println("Both Strings arn't anagram of each other");	
 		}
 
 	}
