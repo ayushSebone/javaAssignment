@@ -7,22 +7,25 @@ public class PallindromeNumber {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Enter the number");
-		
 		int number = sc.nextInt();
-		int temp = number;
+		isPallindrome(number);		
+	}
+	public static void isPallindrome(int num) {
+		int temp = num;
 		int rev = 0;
 		int sum =0;
-		while(number>0) {  
-				rev =number%10;    
+		while(num>0) {  
+				rev =num%10;    
 				sum=sum*10+rev;    
-				number=number/10;    
+				num=num/10;    
 			  
 		}
 		if(temp == sum) {
 			System.out.println("pallindrome");
-			
+			return;
 		}else {
 			System.out.println("not pallindrome");
+			return;
 		}
 	}
 
