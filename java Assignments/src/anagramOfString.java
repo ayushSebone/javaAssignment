@@ -4,21 +4,27 @@ import java.util.*;
 public class anagramOfString {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Enter the first String");	
 		String str1 = sc.nextLine();
 		System.out.println("Enter the Second String");	
 		String str2 = sc.nextLine();
+		
+		isAnagram(str1, str2);
+		
+		
+
+	}
+	public static void isAnagram(String s1, String s2) {
 		boolean flag = false;
 		
-		if(str1.length() != str2.length()) {
+		if(s1.length() != s2.length()) {
 			flag = false;
 			
 		}else {
-			char [] arr1 = str1.toCharArray();
-			char [] arr2 = str1.toCharArray();
+			char [] arr1 = s1.toCharArray();
+			char [] arr2 = s2.toCharArray();
 			
 			Arrays.sort(arr1);
 			Arrays.sort(arr2);
@@ -29,11 +35,13 @@ public class anagramOfString {
 		}
 		
 		if(flag) {
-			System.out.println("Both Strings are anagram of each other");		
+			System.out.println("Both Strings are anagram of each other");
+			return;
 		}else {
 			System.out.println("Both Strings arn't anagram of each other");	
+			return;
 		}
-
+		
 	}
 
 }
