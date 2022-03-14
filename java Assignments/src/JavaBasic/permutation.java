@@ -1,3 +1,4 @@
+package JavaBasic;
 import java.util.*;
 public class permutation {
 
